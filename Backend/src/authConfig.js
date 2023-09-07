@@ -1,9 +1,9 @@
 import { LogLevel } from "@azure/msal-browser";
 export const msalConfig = {
     auth: {
-        clientId: '04a3fb00-a972-438a-83c4-cd6c37afaba7', // Este es el ÚNICO campo obligatorio que debe proporcionar.
-        authority: 'https://login.microsoftonline.com/davidpatarroyo458gmail.onmicrosoft.com', //El valor predeterminado es "https://login.microsoftonline.com/common"
-        redirectUri: 'http://localhost:3000', // Apunta a ventana.ubicación.origen. Debe registrar este URI en el portal/registro de aplicaciones de Azure.
+        clientId: '9419e178-0860-4c0d-9c22-7e4d5de31709', // Este es el ÚNICO campo obligatorio que debe proporcionar.
+        authority: 'https://login.microsoftonline.com/soportenascrew.onmicrosoft.com', //El valor predeterminado es "https://login.microsoftonline.com/common"
+        redirectUri: 'http://localhost:4000', // Apunta a ventana.ubicación.origen. Debe registrar este URI en el portal/registro de aplicaciones de Azure.
         postLogoutRedirectUri: '/', // Indica la página para navegar después de cerrar sesión.
         navigateToLoginRequestUrl: false, // Si es "verdadero", regresará a la ubicación de la solicitud original antes de procesar la respuesta del código de autenticación.
     },
