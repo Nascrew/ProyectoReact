@@ -2,8 +2,8 @@
 const express = require('express')
 
 // COMPONENTES DE RUTA
-const port = process.env.PORT || 4000;
-const app = require ('./App');
+//const port = process.env.PORT || 4000;
+//const app = require ('./App');
 
 const init = express();
 
@@ -11,4 +11,4 @@ const init = express();
 init.use(app);
 
 
-app.listen(port, () => console.log('Example app listening on port', port));
+//app.listen(port, () => console.log('Example app listening on port', port));
