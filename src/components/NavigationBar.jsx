@@ -59,10 +59,10 @@ export const NavigationBar = () => {
                             title={activeAccount ? activeAccount.name : 'Unknown'}
                         >
                             <Dropdown.Item as="button" onClick={handleLogoutPopup}>
-                                Sign out using Popup
+                               Cerrar Sesion
                             </Dropdown.Item>
                             <Dropdown.Item as="button" onClick={handleLogoutRedirect}>
-                                Sign out using Redirect
+                                Cerrar Sesion
                             </Dropdown.Item>
                         </DropdownButton>
                     </div>

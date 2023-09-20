@@ -16,6 +16,7 @@ export const IdTokenData = (props) => {
     
     return (
         <>
+        
             <div className="data-area-div">
                 <p>
                 Vea a continuación las reclamaciones en su <strong> ID ficha </strong>. For more information, visit:{' '}

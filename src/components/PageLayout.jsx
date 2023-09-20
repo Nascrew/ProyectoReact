@@ -1,7 +1,10 @@
-import { AuthenticatedTemplate } from '@azure/msal-react';
+import { AuthenticatedTemplate, UnauthenticatedTemplate } from '@azure/msal-react';
 import { NavigationBar } from './NavigationBar.jsx';
-import '../assets/css/login.css'
-import Image from '../assets/img/Fondo.jpg'
+import { CollapsibleExample } from './Navbar.jsx';
+import { BasicExample } from './views/index.jsx';
+
+import '../assets/css/login.css';
+import Image from '../assets/img/Fondo.jpg';
 
 
 
@@ -13,6 +16,7 @@ export const PageLayout = (props) => {
      */
     return (
         <>
+            <UnauthenticatedTemplate>
             <section class="vh-100"> 
                 <div class="container py-5 h-100">
                     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -37,14 +41,8 @@ export const PageLayout = (props) => {
                                                 <div class="LoginA">
                                                     <span class="h5 fw-bold mb-0">Login your account</span>
                                                 </div>
-                                                
-                                                <div class="row1">
-                                                   <input class="form__input" type="text" name="username" id="username" placeholder=  "Username" />
-                                                </div>
-                                                <div class="row1">
-                                                    <input class="form__input" type="password" name="password" id="password"  placeholder="Password" />
-                                                </div>
-                                
+                                              
+                                            
                                                 <div class="LoginA" >
                                                     <button class="button" type="button">Login</button>
                                                 </div>
@@ -72,7 +70,12 @@ export const PageLayout = (props) => {
                 </div>
             </section>
             {props.children}
+            </UnauthenticatedTemplate>
             <AuthenticatedTemplate>
+            <CollapsibleExample> </CollapsibleExample>
+            <BasicExample> </BasicExample>
+           
+
                 <footer>
                     <center>
                         Inicio de sesion exitoso
