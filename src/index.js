@@ -5,6 +5,7 @@ import { PublicClientApplication, EventType } from '@azure/msal-browser';
 import { msalConfig } from './authConfig';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/login.css';
+import axios from 'axios';
 
 /**
  * Se debe crear una instancia de MSAL fuera del árbol de componentes para evitar que 

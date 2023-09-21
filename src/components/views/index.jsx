@@ -5,22 +5,32 @@ import Sharepoint from '../../assets/img/Microsoft_Office_SharePoint_(2019–pre
 import { useState } from "react";
 import { CardGroup } from 'react-bootstrap';
 import '../../assets/css/index.css'
+import axios from 'axios';
 //import styled from "styled-components";
 
 export const BasicExample = () => {
 
-    const [selectedFile, setSelectedFile] = useState(null);
+    const [archivos, setArchivos] = useState(null);
 
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    setSelectedFile(file);
+    const subirArchivos = e => {
+        setArchivos(e);
+    }
+
+    const CargarArchivos = async () => {
+        const f = new FormData();
+
+        for (let index = 0; index < array.length; index++) {
+            f.append("files", archivos[index]);
+            
+        }
+        await axios.post("", f) //aqui poner la api    
+        .then(response=>{
+            console.log(response.data);
+        }).catch(error=>{
+            console.log(error);
+        })
+
   };
-
-  const handleUpload = () => {
-    // Aquí puedes implementar la lógica para cargar el archivo al servidor o realizar otras acciones.
-  };
-
-      
     
   return (
     <CardGroup className='cardTeams'> 
@@ -44,22 +54,14 @@ export const BasicExample = () => {
             <Card.Text>
             Sube, mira y edita archivos a tu servicio.
             </Card.Text>
-            
-            <input type="file" onChange={handleFileChange} />
-      <button onClick={handleUpload}>Cargar archivo</button>
-    </div>
-
-          
-         
+            <input type="file"
+            name='files'
+            multiple
+            onChange={(e)=>subirArchivos(e.target.files)}/>
+            <button className="btn btn-primary" onClick={()=>insertarArchivos()} >Cargar archivo</button>
+        </div>
           </div>
-        
-
-        
-     
         </Card>
-       
-        
-
     </CardGroup>
   );
 }
